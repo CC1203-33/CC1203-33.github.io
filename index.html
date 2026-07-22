@@ -1,16 +1,258 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional auto parts manufacturer from China, specialized in EGR valves and diesel injection pumps. Full-range auto parts supply for global B2B buyers. ISO certified factory with competitive wholesale pricing." />
-    <meta name="keywords" content="EGR valve, diesel injection pump, auto parts, car parts, engine parts, wholesale auto parts, China auto parts manufacturer, auto parts supplier, diesel fuel pump, brake parts" />
-    <title>Haoxiang Auto Parts - EGR Valves & Diesel Injection Pumps | China Factory</title>
-    <script type="module" crossorigin src="/assets/main-3lGcfoBo.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-CIFNXbcq.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haoxiang Auto Parts - EGR Valves & Diesel Injection Pumps | China Factory</title>
+  <meta name="description" content="Professional auto parts manufacturer from China, specialized in EGR valves and diesel injection pumps.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #0f172a; background: #f8fafc; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    header { background: #0A2463; color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .nav { display: flex; gap: 32px; }
+    .nav a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav a:hover { color: white; }
+    .cta-btn { background: #25D366; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+    .cta-btn:hover { background: #20bd5a; }
+    .hero { background: linear-gradient(135deg, #0A2463 0%, #1e3a5f 50%, #2d4a6f 100%); color: white; padding: 100px 0; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><path d=%22M0 0h40v40H0z%22 fill=%22none%22/><path d=%22M0 40L40 0M-10 10L10 -10M30 50L50 30%22 stroke=%22rgba(255,255,255,0.05)%22 stroke-width=%221%22/></svg>'); opacity: 0.5; }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero h1 { font-size: 48px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; letter-spacing: -1px; }
+    .hero p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; }
+    .hero-buttons { display: flex; gap: 16px; }
+    .btn-primary { background: #25D366; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    .btn-secondary { background: rgba(255,255,255,0.15); color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.3); transition: background 0.2s; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+    section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 48px; }
+    .section-title span { color: #0A2463; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .section-title h2 { font-size: 36px; font-weight: 700; margin-top: 8px; color: #0f172a; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .product-card { background: white; border-radius: 12px; padding: 32px 24px; border: 1px solid #e2e8f0; transition: all 0.3s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,36,99,0.1); border-color: #0A2463; }
+    .product-icon { width: 48px; height: 48px; background: rgba(10,36,99,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+    .product-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #0f172a; }
+    .product-card p { font-size: 14px; color: #64748b; }
+    .about { background: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-image { background: linear-gradient(135deg, #0A2463, #1e3a5f); border-radius: 12px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; }
+    .about h2 { font-size: 32px; font-weight: 700; margin-bottom: 20px; color: #0f172a; }
+    .about p { color: #64748b; margin-bottom: 16px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 32px; }
+    .stat { text-align: center; }
+    .stat-number { font-size: 28px; font-weight: 700; color: #0A2463; }
+    .stat-label { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .contact { background: #0A2463; color: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .contact-info h2 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+    .contact-info p { opacity: 0.9; margin-bottom: 24px; }
+    .contact-item { display: flex; gap: 12px; margin-bottom: 16px; align-items: flex-start; }
+    .contact-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .contact-text p { font-size: 14px; opacity: 0.85; margin: 0; }
+    footer { background: #061539; color: rgba(255,255,255,0.7); padding: 40px 0; text-align: center; font-size: 14px; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .nav { display: none; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      section { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">HAO XIANG</div>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://wa.me/8613005156303" class="cta-btn" target="_blank">Get Quote</a>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Professional Auto Parts Supplier from China</h1>
+        <p>Quality Parts, Competitive Prices, Global Service. Specialized in EGR Valves and Diesel Injection Pumps for global markets.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/8613005156303" class="btn-primary" target="_blank">Get Quote Now</a>
+          <a href="#products" class="btn-secondary">View Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">⚙️</div>
+        <div>
+          <span style="color:#0A2463;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:1px;">About Us</span>
+          <h2>Your Trusted Auto Parts Partner</h2>
+          <p>Guangzhou Haoxiang Auto Parts is a professional auto parts supplier based in Guangzhou, China. We specialize in providing high-quality automotive parts for global markets.</p>
+          <p>Serving importers, distributors, and trade partners worldwide with a wide range of products and reliable service since 2010.</p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">2000+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">8</div>
+              <div class="stat-label">Product Categories</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" style="background:#f8fafc;">
+    <div class="container">
+      <div class="section-title">
+        <span>Our Products</span>
+        <h2>Wide Range of Auto Parts</h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">⚙️</div>
+          <h3>Engine Parts</h3>
+          <p>Pistons, valves, gaskets, timing kits & more</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">⚡</div>
+          <h3>Electrical Parts</h3>
+          <p>Sensors, alternators, starters, ignition systems</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🛞</div>
+          <h3>Brake System</h3>
+          <p>Brake pads, rotors, calipers, master cylinders</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🔩</div>
+          <h3>Suspension</h3>
+          <p>Shock absorbers, struts, control arms, bushings</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🔧</div>
+          <h3>Steering System</h3>
+          <p>Rack & pinion, power steering pumps, tie rods</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">❄️</div>
+          <h3>Cooling System</h3>
+          <p>Radiators, water pumps, thermostats, fans</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">⛽</div>
+          <h3>Diesel Fuel System</h3>
+          <p>Injection pumps, injectors, fuel pumps & diesel parts</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🔌</div>
+          <h3>EGR Valves</h3>
+          <p>Wide range of EGR valves for all major vehicle brands</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p>Get in touch with our sales team for quotes, product information, and OEM/ODM inquiries.</p>
+          <div class="contact-item">
+            <div class="contact-icon">👤</div>
+            <div class="contact-text">
+              <h4>Contact Person</h4>
+              <p>Cathy Cao</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-text">
+              <h4>WhatsApp / WeChat</h4>
+              <p>+86 13005156303</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>haoxiangautoparts@hotmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <h4>Address</h4>
+              <p>Guangzhou, Guangdong, China</p>
+            </div>
+          </div>
+          <a href="https://wa.me/8613005156303" class="btn-primary" target="_blank" style="margin-top:24px;display:inline-flex;">
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:32px;">
+          <h3 style="font-size:20px;font-weight:600;margin-bottom:20px;">Send Inquiry</h3>
+          <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will contact you shortly via WhatsApp.'); this.reset();">
+            <div style="margin-bottom:16px;">
+              <label style="display:block;font-size:13px;font-weight:500;margin-bottom:6px;opacity:0.9;">Name *</label>
+              <input type="text" required style="width:100%;padding:10px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);color:white;font-size:14px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block;font-size:13px;font-weight:500;margin-bottom:6px;opacity:0.9;">Email *</label>
+              <input type="email" required style="width:100%;padding:10px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);color:white;font-size:14px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block;font-size:13px;font-weight:500;margin-bottom:6px;opacity:0.9;">Message *</label>
+              <textarea required rows="4" style="width:100%;padding:10px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);color:white;font-size:14px;font-family:inherit;resize:vertical;"></textarea>
+            </div>
+            <button type="submit" style="width:100%;padding:12px;background:#25D366;color:white;border:none;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.2s;">
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Guangzhou Haoxiang Auto Parts Co., Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
